@@ -6,7 +6,7 @@ Twitter風サービス(Tweeter)を作成して、OAuth 2の基本、および[Sp
 ![image](https://qiita-image-store.s3.amazonaws.com/0/1852/a3d0d4e0-f22b-2f01-5b4b-36df828630f2.png)
 
 1. [Resource Server (REST API)の準備](resource-server.md)
-1. Authorization Serverの作成
+1. [Authorization Serverの作成](authorization-server.md)
 1. CUIアプリケーション (Resource Owner Password Credentials)の作成
 1. Web UIアプリケーション (Authorization Code)の作成
 1. Authorization ServerのUserをデータベースで管理 (TODO)
