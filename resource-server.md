@@ -92,4 +92,7 @@ $ curl -X GET -u user:password http://localhost:8082/v1/tweets
 [{"tweetId":"6da25fa9-522a-4737-9623-053f48fc758f","text":"Hello World!","username":"user","createdAt":"2017-02-18T16:54:28Z"}]
 ```
 
+動作確認を終えたら、一旦Ctrl+CでResource Serverを終了してください。
+
 今後、このResource ServerをOAuth2対応するために修正していきます。
+
