@@ -13,3 +13,7 @@ Twitter風サービス(Tweeter)を作成して、OAuth 2の基本、および[Sp
 1. Authorization ServerのClientをデータベースで管理 (TODO)
 1. JWTに対応 (TODO)
 1. Zuul連携 (TODO)
+
+### 利用規約
+
+無断で本ドキュメントの一部または全部を改変したり、本ドキュメントを用いた二次的著作物を作成することを禁止します。ただし、ドキュメント修正のためのPull Requestは大歓迎です。
