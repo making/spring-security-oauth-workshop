@@ -26,7 +26,7 @@ applications:
     security.oauth2.client.auto-approve-scopes: openid,tweet.read,tweet.write
 ```
 
-各サーバーで異なるホスト名を使用するので`server.context-path`を設置する必要はありません。
+各サーバーで異なるホスト名を使用するので`server.context-path`を`/uaa`を設定する必要はありません。
 
 次のコマンドでデプロイしてください。
 
