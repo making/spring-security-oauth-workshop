@@ -39,6 +39,13 @@ cf push
 
 https://tweeter-auth-tmaki.cfapps.io/
 
+アクセストークンを発行してみましょう。
+
+```
+$ curl -X POST -u demo:demo -d grant_type=password -d username=user -d password=password https://tweeter-auth-tmaki.cfapps.io/oauth/token
+{"access_token":"3728ca1e-e6c0-4eb2-990b-f2cd8abcb61f","token_type":"bearer","expires_in":35153,"scope":"openid tweet.read tweet.write"}
+```
+
 ### Resource Serverのデプロイ
 
 Resource ServerのバックエンドDBとして、MySQLのサーボスインスタンスを作成します。
