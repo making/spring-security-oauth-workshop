@@ -9,6 +9,10 @@
 ![image](https://qiita-image-store.s3.amazonaws.com/0/1852/56b57ccb-19e8-46ab-5da4-d2ac508344e0.png)
 
 
+> **注意**
+>
+> 本ワークショップではローカル起動時にAuthorization ServerをHTTPで受け付けますが、OAuth2の仕様上、実運用時には**必ずHTTPSで受け付けてください**。
+
 ### プロジェクトの作成
 
 次のコマンドを実行すると、`tweeter-auth`フォルダに雛形プロジェクトが生成されます
