@@ -18,7 +18,8 @@ Twitter風サービス(Tweeter)を作成して、OAuth 2の基本、および[Sp
 > **注意**
 >
 > Spring SecurityのOAuth対応はSpring Security 5でをコアに含まれる予定です([spring-security#3907](https://github.com/spring-projects/spring-security/issues/3907))。
-> Spring Security OAuth自体は今後積極的な機能追加(OpenID Connect対応など)は行われないと思われます。
+> 
+> Spring Security OAuth自体には今後積極的な機能追加(OpenID Connect対応など)は行われないと思われます。
 
 ### 利用規約
 
