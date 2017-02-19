@@ -17,8 +17,8 @@ Authorization Server、Resource Server、Web UIをCloud Foundryにデプロイ�
 ``` yaml
 ---
 applications:
-- name: tweeter-auth-tmaki
-  buildpack: java_buildpack
+- name: tweeter-auth-tmaki # 要変更
+  buildpack: java_buildpack
   memory: 512m
   path: target/tweeter-auth-0.0.1-SNAPSHOT.jar
   env:
@@ -52,12 +52,12 @@ cf create-service cleardb spark tweeter-db
 ``` yaml
 ---
 applications:
-- name: tweeter-api-tmaki
+- name: tweeter-api-tmakii # 要変更
   buildpack: java_buildpack
   memory: 512m
   path: target/tweeter-api-0.0.1-SNAPSHOT.jar
   env:
-    security.oauth2.resource.token-info-uri: https://tweeter-auth-tmaki.cfapps.io/oauth/check_token
+    security.oauth2.resource.token-info-uri: https://tweeter-auth-tmaki.cfapps.io/oauth/check_tokeni # 要変更(HTTPSにすること)
   services:
   - tweeter-db
 ```
@@ -80,13 +80,13 @@ https://tweeter-api-tmaki.cfapps.io/
 ``` yaml
 ---
 applications:
-- name: tweeter-webui-tmaki
+- name: tweeter-webui-tmaki # 要変更
   buildpack: java_buildpack
   memory: 512m
   path: target/tweeter-webui-0.0.1-SNAPSHOT.jar
   env:
-    tweeter.api.uri: https://tweeter-api-tmaki.cfapps.io/v1
-    tweeter.auth.uri: https://tweeter-auth-tmaki.cfapps.io
+    tweeter.api.uri: https://tweeter-api-tmaki.cfapps.io/v1 # 要変更(HTTPSにすること)
+    tweeter.auth.uri: https://tweeter-auth-tmaki.cfapps.io # 要変更(HTTPSにすること)
 ```
 
 次のコマンドでデプロイしてください。
