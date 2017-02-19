@@ -171,6 +171,11 @@ $ curl -X GET -u demo:demo http://localhost:9999/uaa/oauth/check_token?token=ae4
 
 `tweeter-api`の`src/main/java/com/example/TweeterApiApplication.java`を次の内容に変更してください。
 
+> **メモ**
+>
+> 変更点は[こちら](https://github.com/tweeter-service/tweeter-api/compare/master...enable-resource-server?diff=split)から確認できます。
+
+
 ``` java
 package com.example;
 
@@ -236,8 +241,6 @@ security.oauth2.client.client-secret=demo
 
 * [1] ... デフォルトで有効になっているBasic認証は不要なので、無効にする
 * [2] ... アクセストークンをチェックするためのエンドポイントの設定
-
-それぞれの変更点は[こちら](https://github.com/tweeter-service/tweeter-api/compare/master...enable-resource-server?diff=split)から確認できます。
 
 `tweeter-api-master`ディレクトリに移動して、次のコマンドで再度ビルドしてください。
 
