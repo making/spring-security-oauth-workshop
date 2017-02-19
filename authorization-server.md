@@ -79,10 +79,10 @@ cd tweeter-auth
 次のコマンドでAuthorization Serverを起動してください。
 
 ```
-$ java -jar target/tweeter-auth-0.0.1-SNAPSHOT.jar
+java -jar target/tweeter-auth-0.0.1-SNAPSHOT.jar
 ```
 
-9999番ポートでResource Serverが起動します。
+9999番ポートでAuthorization Serverが起動します。
 
 ```
 ...
