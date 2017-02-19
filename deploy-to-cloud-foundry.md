@@ -2,7 +2,7 @@
 
 Authorization Server、Resource Server、Web UIをCloud Foundryにデプロイします。
 
-ここでは[Pivotal Web Services](https://run.pivotal.io)を使用します。
+ここでは[Pivotal Web Services](https://run.pivotal.io)を使用します。Cloud Foundryを使うことで各サーバーのHTTPS対応も自動で行われます。
 
 アカウントの作成方法及び、ログイン方法は[こちら](https://github.com/Pivotal-Japan/cf-workshop/blob/master/pivotal-web-services.md)を確認してください。
 
