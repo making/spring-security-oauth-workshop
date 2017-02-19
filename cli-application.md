@@ -75,6 +75,7 @@ public class TweeterCliApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		RestTemplate restTemplate = new RestTemplateBuilder().build();
+		// [1]
 		if (getUsername() == null) {
 			System.out.print("Enter username : ");
 			setUsername(System.console().readLine());
@@ -98,8 +99,9 @@ public class TweeterCliApplication implements CommandLineRunner {
 		JsonNode token = restTemplate.exchange(post(getAccessTokenUri())
 				.header("Authorization",
 						"Basic " + Base64Utils.encodeToString(
-								(getClientId() + ":" + getClientSecret()).getBytes()))
+								(getClientId() + ":" + getClientSecret()).getBytes())) // [2]
 				.body(body), JsonNode.class).getBody();
+		// [3]
 		String accessToken = token.get("access_token").asText();
 
 		if (!StringUtils.isEmpty(getText())) {
@@ -109,7 +111,7 @@ public class TweeterCliApplication implements CommandLineRunner {
 							post(UriComponentsBuilder.fromUri(getTweetApiUri())
 									.pathSegment("tweets").build().toUri())
 											.header("Authorization",
-													"Bearer " + accessToken)
+													"Bearer " + accessToken) // [4]
 											.body(Collections.singletonMap("text",
 													getText())),
 							JsonNode.class);
@@ -187,6 +189,11 @@ public class TweeterCliApplication implements CommandLineRunner {
 	}
 }
 ```
+
+* [1] ... ユーザー名、パスワード、Tweet本文が設定されていない場合は、標準入力から取得する。
+* [2] ... クライアントBasic認証のための`Authorization`ヘッダ。curlコマンドにおける`-u <clientId>:<clientSecret>`に相当する
+* [3] ... `/oauth/token`からのレスポンスJSONのうち`access_token`フィールドを文字列として取得する。これがアクセストークンである。
+* [4] ... Resource Serverにアクセスする際に`Authorization`ヘッダに`Bearer <accessToken>`を付与する。
 
 クライアント認証情報やAuthorization Serverの情報を`src/main/resources/application.properties`に定義します。
 
