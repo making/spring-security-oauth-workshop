@@ -12,6 +12,9 @@
 > **注意**
 >
 > 本ワークショップではローカル起動時にAuthorization ServerをHTTPで受け付けますが、OAuth2の仕様上、実運用時には**必ずHTTPSで受け付けてください**。
+> 
+> 「[Cloud Foundryにデプロイ](deploy-to-cloud-foundry.md)」ではHTTPSを使用します。ローカル開発の後、試してみてください。
+
 
 ### プロジェクトの作成
 
