@@ -211,8 +211,8 @@ public class TweeterApiApplication {
 		@Override
 		public void configure(HttpSecurity http) throws Exception {
 			// [2]
-			http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-					.and().authorizeRequests().antMatchers(HttpMethod.GET, "/v1/**")
+			http.authorizeRequests()
+					.antMatchers(HttpMethod.GET, "/v1/**")
 					.access("#oauth2.hasScope('tweet.read')")
 					.antMatchers(HttpMethod.POST, "/v1/**")
 					.access("#oauth2.hasScope('tweet.write')")
