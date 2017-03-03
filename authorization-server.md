@@ -237,7 +237,7 @@ public class TweeterApiApplication {
 ``` properties
 # [1]
 security.basic.enabled=false
-spring.jackson.serialization.write-date-as-timestamps=false
+spring.jackson.serialization.write-dates-as-timestamps=false
 server.port=8082
 # [2]
 security.oauth2.resource.token-info-uri=http://localhost:9999/uaa/oauth/check_token
