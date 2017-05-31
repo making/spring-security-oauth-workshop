@@ -59,12 +59,12 @@ cf create-service cleardb spark tweeter-db
 ``` yaml
 ---
 applications:
-- name: tweeter-api-tmakii # 要変更
+- name: tweeter-api-tmaki # 要変更
   buildpack: java_buildpack
   memory: 512m
   path: target/tweeter-api-0.0.1-SNAPSHOT.jar
   env:
-    security.oauth2.resource.token-info-uri: https://tweeter-auth-tmaki.cfapps.io/oauth/check_tokeni # 要変更(HTTPSにすること)
+    security.oauth2.resource.token-info-uri: https://tweeter-auth-tmaki.cfapps.io/oauth/check_token # 要変更(HTTPSにすること)
   services:
   - tweeter-db
 ```

@@ -208,7 +208,7 @@ java -jar target/tweeter-webui-0.0.1-SNAPSHOT.jar
 
 ブラウザで[http://localhost:8080](http://localhost:8080)にアクセスしてください。
 
-ブラウザ側では認証が済んでいないため、Authorization Serverにリダイレクトされます。Authorization Server側では認証に関する設定を特にしていないためでふぉるとのBasic認証が使われます。
+ブラウザ側では認証が済んでいないため、Authorization Serverにリダイレクトされます。Authorization Server側では認証に関する設定を特にしていないためデフォルトのBasic認証が使われます。
 
 ![image](https://qiita-image-store.s3.amazonaws.com/0/1852/73e833a4-da49-3798-4260-5e40f5cd648a.png)
 
@@ -864,7 +864,7 @@ public class TweeterController {
 
 最後に画面でこのユーザー情報を表示しましょう。
 
-`src/main/resources/templates/index.html`に次の内容を記述してください。
+`src/main/resources/templates/tweets.html`に次の内容を記述してください。
 
 ``` html
 <!DOCTYPE html>
