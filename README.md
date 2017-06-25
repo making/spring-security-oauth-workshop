@@ -9,6 +9,7 @@ Twitter風サービス(Tweeter)を作成して、OAuth 2の基本、および[Sp
 1. [Authorization Serverの作成](authorization-server.md)
 1. [CUIアプリケーション (Resource Owner Password Credentials)の作成](cli-application.md)
 1. [Web UIアプリケーション (Authorization Code)の作成](webui-application.md)
+1. Web UIアプリケーション (Implicit)の作成 ([サンプルコードのみ](https://github.com/tweeter-service/tweeter-spa))
 1. [Cloud Foundryにデプロイ](deploy-to-cloud-foundry.md)
 1. Authorization ServerのUserをデータベースで管理 (TODO)
 1. Authorization ServerのClientをデータベースで管理 (TODO)
